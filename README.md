@@ -31,6 +31,12 @@ These examples asume the above PowerShell session. Note that the script requires
 
 `.\Combine_Files.ps1 -inFile textfile??.txt -outFile foobar.txt`
 
+## Alternate solution for small-ish files
+
+If the files are relatively small, that's for you to decide, then using the PowerShell Copy-Item with wildcard will also work:
+
+`Get-Content -Path textfile??.txt | Out-File -FilePath foobar.txt -Append`
+
 ## Author
 
 Andrew Nagy
